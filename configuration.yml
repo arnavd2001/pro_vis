@@ -1,0 +1,41 @@
+HP_CHAIN: PPPPPPPPPPPPHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHPPPPPPPPPPPPPPPPPPPPPPPPHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+
+EPSILON_HYDROPHOBIC_HYDROPHOBIC: 10
+EPSILON_HYDROPHOBIC_POLAR:       -3
+EPSILON_HYDROPHOBIC_BACKBONE:    -3
+EPSILON_POLAR_POLAR:              1
+EPSILON_POLAR_BACKBONE:           1
+EPSILON_BACKBONE_BACKBONE:        1
+PENALTY_VALUE:                   10
+
+N_CYCLES: 6000
+COLONY_SIZE: 250
+FORAGER_RATIO: 0.5
+IDLE_LIMIT: 100
+
+N_HIVES: 1
+
+RANDOM_SEED: 72
+
+# DESCRIPTION
+#
+# HP_CHAIN  The chain representing the protein to predict.
+#
+# EPSILON_HYDROPHOBIC_HYDROPHOBIC  Epsilon for H-H side-chain contacts
+# EPSILON_HYDROPHOBIC_POLAR        Epsilon for H-P side-chain contacts
+# EPSILON_HYDROPHOBIC_BACKBONE     Epsilon for H-B side-chain contacts
+# EPSILON_POLAR_POLAR              Epsilon for P-P side-chain contacts
+# EPSILON_POLAR_BACKBONE           Epsilon for P-B side-chain contacts
+# EPSILON_BACKBONE_BACKBONE        Epsilon for B-B side-chain contacts
+# PENALTY_VALUE                    Penalty value for collisions
+#
+# N_CYCLES       Number of HIVE cycles to perform. Each HIVE cycle consists of a 'forager' phase,
+#                  an 'onlooker' phase and a 'scout' phase.
+# COLONY_SIZE    Number of bees in the colony (forager + onlooker)
+# FORAGER_RATIO  Fraction of COLONY_SIZE that should become forager bees
+# IDLE_LIMIT     Maximum number of iterations through which the solution is allowed not to improve
+#
+# N_HIVES   Number of hives in the system. Each hive is a master-slave system. If N nodes are allocated
+#             upon using 'mpirun', then N_HIVES is used to determine how many nodes per hive there should be.
+#
+# RANDOM_SEED    seed for the random number generator. If negative, seed is chosen randomly.
